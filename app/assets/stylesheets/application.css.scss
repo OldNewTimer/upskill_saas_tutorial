@@ -17,10 +17,12 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+// Typography Styles
 h1, h2, h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
+// Gradient for home page
 .home-callout, .navbar {
     //Gradient provided by @_ighosh at uiGradients.com
     background: #9CECFB;  /* fallback for old browsers */
@@ -31,6 +33,7 @@ h1, h2, h3 {
 
 }
 
+// Homepage Styles
 .home-callout {
     margin-top: -20px;
     padding-top: 20px;
@@ -39,24 +42,32 @@ h1, h2, h3 {
     
 }
 
+// Nav Styles
 .navbar {
     border: none;
 }
 
-.navbar-default .navbar-brand {
+/* CSS Way of doing it
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a{
     color: white;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color: white;
-}
 
-.navbar-default .navbar-brand:hover {
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover{
     color: white;
     opacity: 0.75;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
+*/
+
+//SCSS Way of doing it - change color of navbar text
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a{
     color: white;
-    opacity: 0.75;
+    &:hover {
+        color: white;
+        opacity: 0.75;
+    }
 }
