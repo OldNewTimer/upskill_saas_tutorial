@@ -32,7 +32,10 @@ gem 'jbuilder', '2.5.0'
 gem 'bootstrap-sass', '3.3.7'
 
 # Use font-awesome sass gem for adding icons
-gem "font-awesome-rails", '4.6.2'
+gem 'font-awesome-rails', '4.6.2'
+
+# User Hirb for better database table display in console
+gem 'hirb', '0.7.3'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
